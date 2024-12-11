@@ -12,6 +12,13 @@ lazy val root = (project in file("."))
       "org.apache.pekko" %% "pekko-cluster-typed" % pekkoVersion,
       "org.apache.pekko" %% "pekko-cluster-sharding-typed" % pekkoVersion,
 
+      "org.apache.pekko" %% "pekko-http" % "1.1.0",
+      "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0",
+      "org.apache.pekko" %% "pekko-stream" % pekkoVersion,
+
+      "io.spray" %% "spray-json" % "1.3.6",
+
+
       "dev.profunktor" %% "redis4cats-effects" % "1.4.3",
       "dev.profunktor" %% "redis4cats-streams" % "1.4.3"
     ),
