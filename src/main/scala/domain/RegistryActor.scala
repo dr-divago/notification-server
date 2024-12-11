@@ -8,11 +8,8 @@ import org.apache.pekko.actor.typed.{ActorRef, Behavior}
 object RegistryActor:
   import cats.effect.unsafe.implicits.global
   enum Command:
-    // Command to register a frontend server for an event type
     case RegisterFrontend(eventType: String, frontendId: String)
-    // Command to unregister a frontend server for an event type
     case UnregisterFrontend(eventType: String, frontendId: String)
-    // Command to get all frontends for an event type, with a reply actor
     case GetFrontends(eventType: String, replyTo: ActorRef[Response])
 
   enum Response:
